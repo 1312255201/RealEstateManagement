@@ -11,7 +11,7 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>驾校管理系统 - 注册</title>
+    <title>房地产管理系统 - 注册</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -111,7 +111,7 @@
 </head>
 <body>
 <div class="register-container">
-    <h1>美林驾校</h1>
+    <h1>房地产管理系统</h1>
 
     <!-- 显示消息提示 -->
     <%

@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>驾校管理系统 - 控制台</title>
+    <title>房地产管理系统 - 控制台</title>
     <link rel="stylesheet" type="text/css" href="css/dashboard.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
     <!-- 左侧导航栏 -->
     <div class="sidebar">
         <div>
-            <h2>感谢你选择美林驾校</h2>
+            <h2>房地产管理系统</h2>
             <%
                 session = request.getSession(false);
                 String userRole = (String) session.getAttribute("userrole"); // 获取用户身份

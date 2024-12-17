@@ -11,12 +11,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>驾校管理系统 - 登录</title>
+    <title>房地产管理系统 - 登录</title>
     <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
 <div class="login-container">
-    <h1>感谢选择美林驾校</h1>
+    <h1>房地产管理系统</h1>
 
     <!-- 显示错误消息 -->
     <%

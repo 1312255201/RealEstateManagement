@@ -41,7 +41,7 @@ public class ForgotPasswordServlet extends HttpServlet {
                 int userId = rs.getInt("id");
                 // 生成重置密码的唯一令牌
                 String token = java.util.UUID.randomUUID().toString();
-                String resetLink = "http://localhost:8080/DrivingSchoolManagementSystem_war_exploded/reset-password.jsp?token=" + token;
+                String resetLink = "http://localhost:8080/RealEstateManagement_war_exploded/reset-password.jsp?token=" + token;
 
                 // 保存令牌到数据库
                 String saveTokenSql = "INSERT INTO password_resets (user_id, token, created_at) VALUES (?, ?, NOW())";

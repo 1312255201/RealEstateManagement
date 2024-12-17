@@ -11,7 +11,7 @@
  Target Server Version : 50726 (5.7.26-log)
  File Encoding         : 65001
 
- Date: 17/12/2024 16:32:57
+ Date: 17/12/2024 16:42:53
 */
 
 SET NAMES utf8mb4;
@@ -32,6 +32,21 @@ CREATE TABLE `email_config`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '表设计人软件22-7班王赟昊\r\n用于存储发送重置邮件的stmp授权密码，以及邮箱' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
+-- Table structure for password_resets
+-- ----------------------------
+DROP TABLE IF EXISTS `password_resets`;
+CREATE TABLE `password_resets`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '唯一标识，主键，用于标识数据行',
+  `user_id` int(11) NOT NULL COMMENT '用户id，标识这条重置链接重置的用户',
+  `token` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '重置链接后随机生成的校验',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '重置链接创建时间，用于确定链接的过期时间',
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE INDEX `token`(`token`) USING BTREE COMMENT '加速查找tocken，确保tocken不一致，使用BTREE实现唯一索引',
+  INDEX `user_id`(`user_id`) USING BTREE,
+  CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '表设计人软件22-7王赟昊\r\n用于密码遗忘重置的tocken存储' ROW_FORMAT = DYNAMIC;
+
+-- ----------------------------
 -- Table structure for users
 -- ----------------------------
 DROP TABLE IF EXISTS `users`;
@@ -49,6 +64,6 @@ CREATE TABLE `users`  (
   UNIQUE INDEX `phonenumber`(`phonenumber`) USING BTREE COMMENT '用于确保没有两个人电话一样，顺便加速查询速度，使用BTREE实现唯一索引',
   UNIQUE INDEX `email`(`email`) USING BTREE COMMENT '用于确保没有两个人邮箱一样，顺便加速查询速度，使用BTREE实现唯一索引',
   UNIQUE INDEX `idnumber`(`idnumber`) USING BTREE COMMENT '用于确保没有两个人身份证号一样，顺便加速查询速度，使用BTREE实现唯一索引'
-) ENGINE = InnoDB AUTO_INCREMENT = 19 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '项目全部用户储存所在的表\r\n——王赟昊' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '项目全部用户储存所在的表\r\n——王赟昊' ROW_FORMAT = DYNAMIC;
 
 SET FOREIGN_KEY_CHECKS = 1;

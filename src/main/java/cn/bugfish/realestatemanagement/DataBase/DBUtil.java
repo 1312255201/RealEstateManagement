@@ -15,9 +15,9 @@ public class DBUtil {
     static {
         // 配置 HikariCP 数据源
         HikariConfig config = new HikariConfig();
-        config.setJdbcUrl("jdbc:mysql://localhost:3306/drivingschool?useSSL=false&characterEncoding=utf8");
-        config.setUsername("drivingschool");
-        config.setPassword("drivingschool");
+        config.setJdbcUrl("jdbc:mysql://localhost:3306/realestate?useSSL=false&characterEncoding=utf8");
+        config.setUsername("realestate");
+        config.setPassword("realestate");
         config.setDriverClassName("com.mysql.cj.jdbc.Driver");
 
         // 设置连接池参数

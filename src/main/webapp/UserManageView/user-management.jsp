@@ -19,7 +19,7 @@
     <option value="">所有角色</option>
     <option value="admin">管理员</option>
     <option value="user">用户</option>
-    <option value="coach">教练</option>
+    <option value="merchant">房产商</option>
   </select>
   <label for="startDate">注册时间:</label>
   <input type="date" id="startDate" onchange="filterTable()">
@@ -106,7 +106,7 @@
     <select id="userRole" name="role" required>
       <option value="admin">管理员</option>
       <option value="user">用户</option>
-      <option value="coach">教练</option>
+      <option value="merchant">房产商</option>
     </select><br><br>
     <button type="submit">保存</button>
     <button type="button" onclick="closeEditModal()">取消</button>

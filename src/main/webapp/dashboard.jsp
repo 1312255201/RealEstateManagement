@@ -53,7 +53,7 @@
             <a href="dashboard.jsp?section=my_registration" class="<%= "my_registration".equals(request.getParameter("section")) ? "active" : "" %>">查看报名信息</a>
             <a href="dashboard.jsp?section=student_time" class="<%= "student_time".equals(request.getParameter("section")) ? "active" : "" %>">预约练车</a>
             <%
-            } else if ("coach".equals(userRole)) {
+            } else if ("merchant".equals(userRole)) {
             %>
             <a href="dashboard.jsp?section=mystudent" class="<%= "mystudent".equals(request.getParameter("section")) || request.getParameter("section") == null ? "active" : "" %>">我的学员</a>
             <a href="dashboard.jsp?section=coach-time" class="<%= "coach-time".equals(request.getParameter("section")) || request.getParameter("section") == null ? "active" : "" %>">预约管理</a>

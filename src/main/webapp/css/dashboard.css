@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    display: flex;
+    min-height: 100vh; /* 使页面高度至少等于视口高度 */
+    overflow: hidden; /* 禁止 body 出现滚动条 */
+}
+
+.dashboard {
+    display: flex;
+    flex: 1; /* 使 dashboard 占满视口 */
+    overflow: hidden; /* 避免内部滚动条干扰 */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #007BFF;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: sticky; /* 固定 sidebar */
+    top: 0; /* 从顶部开始固定 */
+    height: 100vh; /* 高度占满整个视口 */
+    overflow-y: auto; /* 若内容过多，则 sidebar 内部可以滚动 */
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.sidebar a {
+    display: block; /* 每个导航项独占一行 */
+    padding: 15px 20px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: white;
+    background-color: #0056b3;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #004085;
+}
+
+.sidebar a.active {
+    background-color: #003566;
+}
+
+.logout {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #DC3545;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.logout:hover {
+    background-color: #a71d2a;
+}
+
+.content {
+    flex-grow: 1; /* 占用剩余空间 */
+    padding: 20px;
+    background-color: #fff;
+    overflow-y: auto; /* 启用垂直滚动 */
+    height: 100vh; /* 高度等于视口 */
+    box-sizing: border-box; /* 包含 padding */
+
+}

@@ -19,7 +19,7 @@ public class DBUtil {
         config.setUsername("realestate");
         config.setPassword("realestate");
         config.setDriverClassName("com.mysql.cj.jdbc.Driver");
-
+        //qwq
         // 设置连接池参数
         config.setMaximumPoolSize(10); // 最大连接数
         config.setMinimumIdle(2); // 最小空闲连接数
